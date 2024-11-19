@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>GRAB THE SEAT: ANIMAL</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+<link href="layout.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link href="interface-style.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.js" integrity="sha512-wkHtSbhQMx77jh9oKL0AlLBd15fOMoJUowEpAzmSG5q5Pg9oF+XoMLCitFmi7AOhIVhR6T6BsaHJr6ChuXaM/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<body> 
+  
+  <style> 
+    .maincontainer{
+          box-shadow: 0px 0px 40px goldenrod;
+    }
+  </style>
+
+
+    <div class="maincontainer">
+        <div class="left">
+            <img src="https://m.media-amazon.com/images/M/MV5BNWU5ZDRmMWItZGU0NC00NzZjLTgzYjctY2RlMzI3OTNkN2U5XkEyXkFqcGdeQXVyMTE0MTY2Mzk2._V1_.jpg">
+            <div class="play">
+                <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="left-below">
+              <h5>Directed by:</h5>
+              <p>Sandeep Reedy Vanga</p>
+              <h5>Starring</h5>
+              <p>Ranbir Kapoor, Anil Kapoor, Rashmika Mandanna</p>
+          </div>
+        </div>
+        <div class="right">
+            <!-- <div class="rightsidediv"> -->
+                <!-- <div class="head-time"> -->
+                    <!-- <h1>JAWAAN</h1>
+                </div>
+                <div class="time">
+                    <h6>165 minutes</h6>
+                    <button>PG-13</button>
+                </div> -->
+                 <!--Movie select option-->
+
+
+                <!-- <video src="https://www.youtube.com/watch?v=8EQRY-3pm4c&list=PLOlW7toEegLXC4O6vE1_9mIf1s5Wrq9nB"></video> -->
+
+
+
+        <div class="movietitle">
+          <div class="movietitle-left-right">
+          <div class="time-title-left">
+            <h4>ANIMAL</h4>
+            <p><i class="bi bi-calendar-minus-fill"></i>&nbsp;&nbsp; Thursday 4 January</p>
+          </div>
+          <div class="time-table-right">
+            <p><i class="bi bi-clock-fill"></i> 120 min</p>
+          </div>
+        </div>
+        <hr style="width: 90%">
+
+          <div class="dates">
+          <ul id="itemList">
+            <li onclick="changeColor(this)" class="active" >Mon <br> 1</li>
+            <li onclick="changeColor(this)">Tue <br> 2</li>
+            <li onclick="changeColor(this)">Wed <br> 3</li>
+            <li onclick="changeColor(this)">Thu <br> 4</li>
+            <li onclick="changeColor(this)">Fri <br> 5</li>
+            <li onclick="changeColor(this)">Sat <br> 6</li>
+            <li onclick="changeColor(this)">Sun <br> 7</li>
+            
+            <li class="showtime"><select>
+              <option>Show Time</option>
+              <option>10:00 AM</option>
+              <option>1:00 PM</option>
+              <option>4:20 PM</option>
+              <option>7:30 PM</option>
+          </select></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <!-- TICKETS PANEL -->
+
+
+      <style>
+        .text{
+          transform: translateX(25%);
+        }
+        #barcode{
+          width: 90%;
+          height: 90%;
+        }
+        .tickets{
+          border: 1px solid white;
+          margin-top: 5%;
+          width: 90%;
+          transform: translateX(4%);
+          height: 20%;
+          display: flex;
+        }
+        .tickets .barcode{
+          text-align: center;
+          background-color: white;
+          color: black;
+          width: 30%;
+          height: 100%;
+        }
+        .tickets .ticket-details{
+          background-image: url("https://articles-img.sftcdn.net/f_auto,t_article_cover_l/auto-mapping-folder/sites/3/2023/04/The-Marvels.jpg");
+          width: 100%;
+          background-size: contain;
+          /* background-repeat: ; */
+        }
+      </style>
+
+      <script>JsBarcode("#barcode", "Hi world!");</script>
+      
+
+
+
+      <div class="booking-panel">
+    
+      <div class="movie-container">
+        <label style="color: black"> Select a movie:</label>
+        <select id="movie" style="background-color: black;">
+          <option value="220">Godzilla vs Kong (RS.220)</option>
+          <option value="320">Radhe (RS.320)</option>
+          <option value="250">RRR (RS.250)</option>
+          <option value="260">F9 (RS.260)</option>
+        </select>
+      </div>
+  
+      <ul class="showcase">
+        <li>
+          <div class="seat"></div>
+          <small>Available</small>
+        </li>
+        <li>
+          <div class="seat selected"></div>
+          <small>Selected</small>
+        </li>
+        <li>
+          <div class="seat sold"></div>
+          <small>Sold</small>
+        </li>
+      </ul>
+      <div class="container">
+        <div class="screen"></div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+        </div>
+        <p class="text" style="margin-top: 20px">
+          You have selected <span id="count">0</span> seat for a price of RS.<span
+            id="total">0</span>
+        </p>  
+        <a href="Animal Tickets.html"><button class="booknow-button"> BOOK NOW</button></a>
+        <style>
+          .booknow-button{
+            margin-left: 40rem;
+          }
+        </style>
+      </div>
+  
+      
+      </p>
+      <script src="interface-js.js"></script>
+      
+      </div>
+
+      
+        </div>
+    </center>
+    </div>
+
+    <style>
+
+    </style>
+
+
+
+
+</body>
+
+<style>
+
+
+
+
+    /* Headtime */
+    .maincontainer .rightsidediv .head-time{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+
+
+
+    /* About movie */
+    .left-below{
+        color: white;
+        padding-left: 10px;
+        font-family: 'Mukta';
+    }
+    .left-below h5{
+        font-size: 20px;
+        margin: 0px 0px;
+    }
+    .left-below p{
+        margin-top: 10px;
+    }
+    /* About Movie */
+
+
+
+    /* Rightside div */
+
+    .maincontainer .right{
+        background: unset;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+    .maincontainer .right .rightsidediv::before{
+        position: absolute;
+        content: '';
+        width:  95%;
+        height: 350px;
+        /* border:  1px solid white; */
+        background: url("https://www.shmoti.com/ImageFiles/News_Image_1170x570/20230914_Banner_JwanS6E20230914.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        /* background-size: -30px/cover; */
+        z-index: -10;
+    }
+
+    .maincontainer .right .rightsidediv::after{
+        position: absolute;
+        content: '';
+        width:  95%;
+        height: 350px;
+        /* border:  1px solid white; */
+        background: linear-gradient(0deg , transparent , #1f2025);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+    /* Rightside div */
+
+    body{
+        width: 98vw;
+        height: 107vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+    }
+    .maincontainer{
+        margin-top: 2%;
+        width: 90%;
+        height: 100%;
+        border: 1px solid white;
+        display: flex;
+        border-radius: 15px;
+        
+    }
+    .maincontainer .left, .right{
+        border: 1px solid white;
+        width: 80%;
+        height: 100%;
+        position: relative;
+    }
+    .maincontainer .left{
+        width: 20%;
+        border-radius: 15px;
+    }
+    .maincontainer .left img{
+        width: 100%;
+        border-radius: 10px 0px 0px 0px
+    }
+    .maincontainer .left .play{
+        color: orangered;
+        position: relative;
+        left: 44%;
+        top: -4%;
+        width: 27px;
+        height: 27px;
+        font-size: 3rem;
+        /* background-color: orange; */
+        border-radius: 40px;
+    }
+    .maincontainer .left .play i:hover{
+        transform: rotate(360deg);
+    }
+</style>
+
+
+
+</html>

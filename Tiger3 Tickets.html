@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>GRAB THE SEAT: Tiger 3</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+<link href="layout.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<link href="interface-style.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.js" integrity="sha512-wkHtSbhQMx77jh9oKL0AlLBd15fOMoJUowEpAzmSG5q5Pg9oF+XoMLCitFmi7AOhIVhR6T6BsaHJr6ChuXaM/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <link href="stylee.css" rel="stylesheet">  -->
+
+<body>
+  <style> 
+    .maincontainer{
+      box-shadow: 0px 0px 20px rgb(0, 165, 187);
+    }
+  </style>
+    <div class="maincontainer">
+      
+        <div class="left">
+            <img src="https://assets.gadgets360cdn.com/pricee/assets/product/202310/tiger_31_1698301609.jpg">
+            <div class="play">
+                <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="left-below">
+                <h5>Directed by:</h5>
+                <p>Maneesh Sharma</p>
+                <h5>Starring</h5>
+                <p>Salman Khan, Katrina Kaif, Imran Hashmi</p>
+            </div>
+        </div>
+        <div class="right">
+
+        <div class="movietitle">
+          <div class="movietitle-left-right">
+          <div class="time-title-left">
+            <h4>Tiger 3 </h4>
+            <p><i class="bi bi-calendar-minus-fill"></i>&nbsp;&nbsp; Thursday 4 January</p>
+          </div>
+          <div class="time-table-right">
+            <p><i class="bi bi-clock-fill"></i> 150 min</p>
+          </div>
+        </div>
+        <hr style="width: 90%">
+
+          <div class="dates">
+          <ul id="itemList">
+            <li class="active" >Mon <br> 1</li>
+            <li>Tue <br> 2</li>
+            <li>Wed <br> 3</li>
+            <li>Thu <br> 4</li>
+            <li>Fri <br> 5</li>
+            <li>Sat <br> 6</li>
+            <li>Sun <br> 7</li>
+          </ul>
+        </div>
+        </div>
+
+
+
+      
+
+      <!-- TICKETS PANEL -->
+
+      <script>JsBarcode("#barcode", "MARVL43954");</script>
+
+      <div class="tickets">
+        <div class="barcode">
+          Barcode
+          <svg id="barcode"></svg>
+          <h5>GRAB THE SEAT</h5>
+        </div>
+        <div class="ticket-details">
+          .
+        </div>
+      </div>
+
+      <div class="tickets">
+        <div class="barcode">
+          Barcode
+          <svg id="barcode"></svg>
+          <h5>GRAB THE SEAT</h5>
+        </div>
+        <div class="ticket-details">
+          .
+        </div>
+      </div>
+      <style>
+        .tickets .ticket-details{
+           background-image: url("https://www.yashrajfilms.com/images/default-source/movies/tiger-3/tiger-3---salman-khan-katrina-kaif5f98ada026f56f7f9f64ff0e00090313.jpg?sfvrsn=866dc2cc_9  ");
+           width: 100%;
+           background-size: contain;
+           /* background-repeat: ; */
+          }
+        .tickets{
+          box-shadow: 0px 0px 20px rgb(0, 165, 187);
+        }
+      </style>
+        
+        <script>JsBarcode("#barcode", "Hi world!");</script>
+
+
+
+
+        
+      
+      <div class="book-now-container">
+      <button id="show-btn" class="booknow-button">BOOK TICKETS</button>
+      </div>
+      <script>JsBarcode("#barcode", "Hi world!");</script>
+
+      <script>
+        const mybutton = document.getElementById("show-btn")
+
+        mybutton.addEventListener('click',function(){
+        alert("Tickets are now Booked");
+
+        });
+      </script>
+
+
+
+    </div>
+    </div>
+    </center>
+    </div>
+
+
+
+
+</body>
+</html>

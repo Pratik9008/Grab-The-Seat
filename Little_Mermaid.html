@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Prodigious</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href='https://fonts.googleapis.com/css?family=Mukta' rel='stylesheet'>
+<link href="layout.css" rel="stylesheet">
+<body>  
+    <div class="maincontainer">
+        <div class="left">
+            <img src="https://i.etsystatic.com/18242346/r/il/c09ca4/4768095505/il_fullxfull.4768095505_a0ky.jpg">
+            <div class="play">
+                <i class="bi bi-play-circle"></i>
+            </div>
+            <div class="left-below">
+                <h5>Directed by:</h5>
+                <p>Rob Marshall</p>
+                <h5>Starring</h5>
+                <p>Halle Bailey, Melissa McCarthy, Javier Barden</p>
+            </div>
+        </div>
+        <div class="right">
+            <!-- <div class="rightsidediv"> -->
+                <!-- <div class="head-time"> -->
+                    <!-- <h1>JAWAAN</h1>
+                </div>
+                <div class="time">
+                    <h6>165 minutes</h6>
+                    <button>PG-13</button>
+                </div> -->
+                 <!--Movie select option-->
+        <div class="masterbookingcontainer">
+            <center>
+            <div class="movie-container">
+              <H2>Select desired seats for the show:   <a>Little Mermaid</a></H2>
+      </div>
+  
+      <!--Showcase-->
+      <ul class="showcase">
+        <li>
+          <div class="seat"></div>
+          <small>Available</small>
+        </li>
+        <li>
+          <div class="seat selected"></div>
+          <small>Selected</small>
+        </li>
+        <li>
+          <div class="seat sold"></div>
+          <small>Sold</small>
+        </li>
+      </ul>
+  
+      <!--Main Container-->
+      <div class="container">
+        <div class="screen"></div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+        </div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+  
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat sold"></div>
+          <div class="seat"></div>
+        </div>
+      </div>
+  
+      <p class="text">
+        You have selected <span id="count">0</span> seat for a price of RS.<span
+          id="total"
+          >0</span
+        >
+      </p>
+  
+      <script src="layout.css"></script>
+            </div>
+        </div>
+    </center>
+    </div>
+</body>
+
+<style>
+
+    /* Headtime */
+    .maincontainer .rightsidediv .head-time{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+
+    /* About movie */
+    .left-below{
+        color: white;
+        padding-left: 10px;
+        font-family: 'Mukta';
+    }
+    .left-below h5{
+        font-size: 20px;
+        margin: 0px 0px;
+    }
+    .left-below p{
+        margin-top: 10px;
+    }
+    /* About Movie */
+
+
+
+    /* Rightside div */
+
+    .maincontainer .right{
+        background: unset;
+        padding: 10px 30px;
+        border-radius: 15px;
+    }
+    .maincontainer .right .rightsidediv::before{
+        position: absolute;
+        content: '';
+        width:  95%;
+        height: 350px;
+        /* border:  1px solid white; */
+        background: url("https://www.shmoti.com/ImageFiles/News_Image_1170x570/20230914_Banner_JwanS6E20230914.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        /* background-size: -30px/cover; */
+        z-index: -10;
+    }
+
+    .maincontainer .right .rightsidediv::after{
+        position: absolute;
+        content: '';
+        width:  95%;
+        height: 350px;
+        /* border:  1px solid white; */
+        background: linear-gradient(0deg , transparent , #1f2025);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+    /* Rightside div */
+
+    body{
+        width: 99vw;
+        height: 98vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+    }
+    .maincontainer{
+        width: 90%;
+        height: 90%;
+        border: 1px solid white;
+        display: flex;
+        border-radius: 15px;
+    }
+    .maincontainer .left, .right{
+        border: 1px solid white;
+        width: 80%;
+        height: 100%;
+        position: relative;
+    }
+    .maincontainer .left{
+        width: 20%;
+        border-radius: 15px;
+    }
+    .maincontainer .left img{
+        width: 100%;
+        border-radius: 10px 0px 0px 0px
+    }
+    .maincontainer .left .play{
+        color: orangered;
+        position: relative;
+        left: 44%;
+        top: -4%;
+        width: 27px;
+        height: 27px;
+        font-size: 3rem;
+        /* background-color: orange; */
+        border-radius: 40px;
+    }
+    .maincontainer .left .play i:hover{
+        transform: rotate(360deg);
+    }
+</style>
+
+
+<script>
+        /*
+Step 1: Get references to DOM elements
+*/
+// Get a reference to the main container
+const container = document.querySelector(".container");
+
+// Reference of all available seats
+const seats = document.querySelectorAll(".row .seat:not(.sold)");
+
+// Reference of the count and total elements
+const count = document.getElementById("count");
+const total = document.getElementById("total");
+
+// Reference of the movie dropdown
+const movieSelect = document.getElementById("movie");
+
+/*
+Step 2: Add event listeners
+*/
+
+// Event listner for movie selection change
+movieSelect.addEventListener("change", e => {
+  //Update ticket price and store selected movie data
+  ticketPrice = +e.target.value;
+  setMovieData(e.target.selectedIndex, e.target.value);
+
+  // Update displayed count and total
+  updateSelectedCount();
+});
+
+// Event listner for seat clicks
+container.addEventListener("click", e => {
+  // check if a seat is clicked and not sold
+  if (
+    e.target.classList.contains("seat") &&
+    !e.target.classList.contains("sold")
+  ) {
+    //Toggle seat selection
+    e.target.classList.toggle("selected");
+
+    // Update displayed count and total
+    updateSelectedCount();
+  }
+});
+
+/*
+Step 3: Define funtion to update selected count and total
+*/
+
+function updateSelectedCount() {
+  // Get all selected seats
+  const selectedSeats = document.querySelectorAll(".row .seat.selected");
+
+  // Get an array of selected seats's indexes
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+
+  // Store selected seats index into local storage
+  localStorage.setItem("selectedSeats", JSON.stringify(seatsIndex));
+
+  // Calculate selected seats and count
+  const selectedSeatsCounts = selectedSeats.length;
+
+  // Update UI with selected seats count and total price
+  count.innerText = selectedSeatsCounts;
+  total.innerText = selectedSeatsCounts * ticketPrice;
+
+  setMovieData(movieSelect.selectedIndex, movieSelect.value);
+}
+
+/*
+Step 4: Define funtion to set selected movie data, in local storage
+*/
+function setMovieData(movieIndex, moviePrice) {
+  localStorage.setItem("selectedMovieIndex", movieIndex);
+  localStorage.setItem("selectedMoviePrice", moviePrice);
+}
+
+/*
+Step 5: Define funtion to populate UI with local storage data
+*/
+// Function to populate UI from local storage data
+
+function populateUI() {
+  // Get selected seats from local storage
+  const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
+  // If there are selected seats, mark them as selected in the UI
+  if (selectedSeats != null && selectedSeats.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add("selected");
+      }
+    });
+  }
+
+  // Get selected movie data from local storage
+  const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+
+  // If there's a selected movie index, then set it in the dropdown
+  if (selectedMovieIndex !== null) {
+    movieSelect.selectedIndex = selectedMovieIndex;
+  }
+}
+
+/*
+Step 6: Initial setup of count, total and UI based on save data
+*/
+populateUI();
+
+// Initialize ticket price
+let ticketPrice = +movieSelect.value;
+
+updateSelectedCount();
+  </script>
+</script>
+</html>

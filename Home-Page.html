@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAB THE SEAT</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Smooch Sans' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link href='https://fonts.googleapis.com/css?family=Edu TAS Beginner' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Russo One' rel='stylesheet'>
+
+<body style="background-color: black;">
+    <header>
+        <section id="logo">   <!--Adding Logo-->
+            <h2 style="color: aliceblue;">Grab The Seat</h2>
+        </section>
+
+        <ul>        <!--Adding Unordered list-->
+            <a href="#nowshowing"><li>Movies</li><a>
+            <a href="About us.html" style="text-decoration: none;"><li>About us</li></a>
+            <a href="#offerscontainer"><li>Dine-In</li></a>
+            <li>GRAB THE SEAT</li>
+        </ul>
+
+        <section class="searchbar">   <!--Search Bar-->
+                <input id="search" placeholder="Search movies or theater" type="search">   
+                <button id="butt" type="search" style="cursor: pointer">Search</button>
+                <!-- <img src="https://i.postimg.cc/3J9qjht7/Search-icon.png"> -->
+        </section>
+        <a href="login.html"><button id="login_button">LOGIN / SIGNUP</button></a>
+    </header>
+
+    <div class="bannerimage">
+        <h1>   GRAB THE SEAT</h1>
+        <p>Where Every Show Is a Standing Ovation</p>
+        <center>
+        <button id="explore_button">EXPLORE</button>
+        </center>
+    </div>
+
+    <!-- <div class="nowshowing">
+        <div>
+            <a>NOW SHOWING</a>
+            <div class="imagedisplay">
+                <img id="fukrey" src="https://timesofindia.indiatimes.com/photo/92385391.cms"> -->
+                <!-- <img id="jawaan" src="https://www.bollywoodhungama.com/wp-content/uploads/2023/08/Shah-Rukh-Khan-Vijay-Sethupathi-and-Nayanthara-take-center-stage-in-fiery-new-poster-of-Jawan.jpg"> -->
+                
+            <!-- </div>
+        </div>
+    </div>  -->
+<div class="nowshowing" id="nowshowing">
+<h2>NOW SHOWING</h2>
+<i class="bi bi-chevron-left" id="left"></i> 
+<i class="bi bi-chevron-right" id="right"></i>
+</div>
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="image-list hidden" data-aos="fade-up">
+              <div class="animalimg">  <a href="ANIMAL.html"><img class="image-item" id="animal" src="https://www.filmibeat.com/img/2023/09/poster1-1695013579.jpg"></a> </div>
+                <a href="Tiger 3.html"><img class="image-item" id="tiger3" src="https://juksun.com/wp-content/uploads/elementor/thumbs/Tiger-3-Movie-Poster-1-e1696763131111-qdk2aj9g7l4dsgu5dr4nvw9fzvk883d8ljvop3367c.jpg"></a> 
+                <a href="The_Marvels.html"><img class="image-item" id="fukrey2"  src="https://www.pinkvilla.com/images/2023-10/1696701833_the-marvels.jpg">  <!-- fukrey2 --> </a>
+                <a href="Jawaan.html"><img class="image-item" id="jawaan2" src="https://www.bollywoodhungama.com/wp-content/uploads/2023/08/Shah-Rukh-Khan-Vijay-Sethupathi-and-Nayanthara-take-center-stage-in-fiery-new-poster-of-Jawan.jpg">     <!-- Jawaan --></a>
+                <!-- <a href="NUN2.html"><img class="image-item" id="thenun" src="https://m.media-amazon.com/images/M/MV5BNmE5MmM2ZGEtNTVlNC00M2Q3LTliMjMtMzg5YjUyMjliZWIzXkEyXkFqcGdeQXVyMTAxNzQ1NzI@._V1_.jpg"> THE NUN</a> -->
+               <div class="wonkaimg"> <a href="Wonka.html"><img class="image-item" src="https://m.media-amazon.com/images/M/MV5BNDM4NTk0NjktZDJhMi00MmFmLTliMzEtN2RkZDY2OTNiMDgzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" ></a></div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    enteries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+      else{
+        entry.target.classList.remove('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+
+
+
+
+<div id="offerscontainer">
+<h1 class="offersh1">Foods & Drinks at GRAB THE SEAT</h1>
+  <div class="offers">
+    
+    <div class="offers-left">
+      
+      <div class="offersleftimg">
+      </div>
+      <h2>GRAB THE SEAT Cinemas Concessions</h2>
+      <p>Great variety, superior quality, made-to-order snacks just for you.</p>
+    </div>
+    <div class="offers-right">
+      <div class="offersrightimg">
+        
+      </div>
+      <h2>GRAB THE SEAT Dine In </h2>
+      <p>It's a movie theatre and restaurant rolled into one.</p>
+      
+
+    </div>
+  </div>
+  </div>
+  <style>
+    .offersh1{
+      color: white;
+      margin-left: 5%;
+      margin-top: 20%;
+      font-family: 'righteous';
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 3%;
+
+    }
+    .offers h2{
+      font-size: 1.8rem;
+      margin-top: 20px;
+      font-family: 'Russo one';
+    }
+    .offersleftimg{
+      background-image: url("https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,w_1600/v1585160413/amc-cdn/general/feature-fare/FB_1511_FF%20Menu%20Launch_SocialWeb_Promo_1200x856%20(4).jpg");
+      background-size: cover;
+      height: 60vh;
+      background-repeat: no-repeat;
+
+    }
+    .offersrightimg{
+      background-image: url("https://amc-theatres-res.cloudinary.com/image/upload/c_fill,f_auto,fl_lossy,g_auto,h_892,q_auto,w_1250/v1689023085/amc-cdn/general/food-and-drink/dine-in/005_GA_210803_172.jpg");
+      background-size: cover;
+      height: 60vh;
+      background-repeat: no-repeat;
+    }
+    .offers p{
+      font-size: 20px;
+      margin-left: 3%;
+      font-family: 'Exo';
+      margin-right: 11px;
+    }
+      .offers{
+        font-size: 5rem;
+        color: white;
+        display: flex;
+        margin-left: 5%;
+        justify-content: space-between;
+        margin-right: 5%;
+        margin-bottom: 8%;
+      }
+      .offers-left{
+        /* border: 1px solid white; */
+        color: white;
+        width: 45%;
+        
+      }
+      .offers-right{
+        width: 45%;
+        /* border: 1px solid white; */
+      }
+      header ul li{
+        text-decoration: none;
+      }
+  </style>
+
+
+    <footer>
+        <div class="containerfooter">
+
+        <div class="sec section-heading">
+            <h2>Contact Us.</h2>
+            <p>Having some queries? Get them solved here.</p>
+  
+            <form action="#">
+              <div class="sec form-row">
+                <div class="col dk-footer-form">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                  />
+  
+                  <button
+                    type="submit"
+                    id="gmailus"
+                    value="mailto: sb2253@gmail.com"
+                  >
+                    <i class="fa fa-send"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+        
+            <div class="logo_footer">
+            <h2>GRAB THE SEAT</h2>
+            
+            <span class="animate-border border-black"></span>
+  
+            <div class="footer-detail">
+
+            </div>
+          </div>
+
+          <div class="sec followus">
+            <h2 style="font-family: 'Smooch Sans';">Follow Us.</h2>
+  
+            <ul class="sci">
+              <li>
+                <a
+                  href="https://www.facebook.com/sarthak.kumar.50767984/"
+                  target="_blank"
+                  ><i class="bi bi-facebook"></i>
+                </a>
+              </li>
+  
+              <li>
+                <a href="https://www.instagram.com/divanshu_sharma019/" target="_blank"
+                  ><i class="bi bi-instagram"></i></a>
+              </li>
+  
+              
+  
+              <li>
+                <a href="mailto: anshusharma@hmail.com" target="_blank"
+                  ><i class="bi bi-envelope"></i></a>
+              </li>
+            </ul>
+          </div>
+        
+
+
+          <div class="footernav">
+            <h2 style="font-family: 'Smooch Sans';">NAVIGATE.</h2>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT US</li>
+                <li>NEARBY THEATER</li>
+                <li>OFFERS & DISCOUNT</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+
+          </div >
+          <div class="copyrightText">
+            <p class="p1" >“Where stories come to life”</p>
+            
+            <p class="p2">
+              Copyright ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              || GRAB THE SEAT. All rights reserved
+            </p>
+          </div>
+
+
+
+
+    </footer>
+</body>
+
+    <style>
+      .animalimg img{
+        height: 31rem;
+      }
+      .wonkaimg img{
+        /* border: 1px solid white; */
+        height: 30rem;
+      }
+      
+        h2{
+            color: white;
+            font-family: 'Righteous';
+            font-size: 40px;
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        #explore_button{
+            margin-top: 20px;
+            width: 118px;
+            height: 35px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: bold;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+        }
+        #explore_button:hover{
+            width: 125px;
+            height: 45px;
+            font-size: 15px;  
+            box-shadow: 0px 0px 10px white;
+            text-shadow: 0px 0px 10px white;
+
+        }
+        .bannerimage button{
+             margin-top: 10px;
+             height: 30px;
+        }
+        .bannerimage{
+            width: 1660px;
+            height: 911px;
+            background-image: url("https://i.postimg.cc/y6DKLK3Z/Banner-Image.jpg");
+            /* image-resolution: 600px 600px; */
+            background-repeat: no-repeat;
+            background-size: 104rem 45rem;
+        }
+        .bannerimage h1{
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            padding-top: 70px;
+            font-family: 'Righteous';
+            font-size: 5rem;
+            font-weight: bold 900;
+            opacity: 70%;
+        }
+        .bannerimage p{
+            color: white;
+            font-family: 'Ubuntu';
+            opacity: 70%;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        header ul{
+            display: flex;
+            align-items: center;
+            margin-left: 18px;
+
+        }
+        header li{
+            list-style-type: none;
+            color: rgba(255, 255, 255, 0.658);
+            margin-left: 40px; 
+            font-family: 'Exo';
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        header li:hover{
+          text-shadow: 0px 0px 10px white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        #login_button{
+            position: absolute;
+            right: 35px;
+            transform: translateY(-30%);
+            height: 45px;
+            width: 122px;
+            border: none;
+            background-color: rgb(63, 60, 60);
+            color: #ee9d08; 
+            /* rgba(255, 255, 255, 0.658); */
+            border-radius: 10px;
+            margin-top: 35px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: 0.5s;
+           }
+        
+           #login_button:hover{
+            transform: scale(1.1);
+            z-index: 2;
+            
+           }
+
+
+
+
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       
+       .slider-wrapper .image-list{
+        display: grid;
+        gap: 5px;
+        font-size: 0px;
+        overflow-x: 30%;
+        scrollbar-width: none;
+        grid-template-columns: repeat(5, 1fr); 
+        /* border: 1px solid white; */
+        transition: transform 0.4s ease-in-out;
+        animation: transitionIn 0.75s;
+        
+       }
+       #animal{}
+
+       .slider-wrapper .image-list::-webkit-scrollbar{
+        display: none;
+       }
+       .slider-wrapper .image-list .image-item{
+        width: 325px;
+        /* height: 400px; */
+        object-fit: cover;
+        }
+        .image-list img{
+            animation: transitionIn 0.75s;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .container{
+            max-width: 2000px;
+            margin-bottom: 100px;
+            margin-left: 10px;
+        }
+
+
+
+
+
+       #jawaan2{
+        height: 483px;
+       }
+       #fukrey2{
+        height: 483px;;
+       }
+       #evildeadrise{
+        height:483px;
+       }
+       #thenun{
+        height: 483px;
+       }
+
+
+
+
+    </style>
+</html>
